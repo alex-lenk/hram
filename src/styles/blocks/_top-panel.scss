@@ -1,0 +1,102 @@
+.top-panel {
+  background-color: #adaca3;
+  //background-color: rgba(#3b2e06, .2);
+  color: $color-white;
+  .row {
+    height: 70px;
+  }
+  a {
+    color: $color-white;
+  }
+}
+
+.logo img {
+  height: 65px;
+  margin-top: 2px;
+}
+
+.header-phone {
+  height: 100%;
+  font-size: 20px;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+
+  .phone-call {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    fill: #ffffff;
+  }
+}
+
+.header-search {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  input {
+    width: 0;
+    height: 33px;
+    position: absolute;
+    right: 48px;
+    z-index: 5;
+    border: 0;
+    padding: 0 10px;
+    opacity: 0;
+    display: block;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    @include transition(all, ease);
+  }
+  &:hover {
+    input {
+      width: 275px;
+      opacity: 1;
+    }
+    .btn-orange {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      box-shadow: 0 2px 1px $color-shadow-orange;
+    }
+  }
+  .btn-orange {
+    padding-top: 5px;
+    padding-bottom: 3px;
+    position: relative;
+    z-index: 8;
+  }
+  .search {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+  }
+}
+
+.top-nav {
+  height: 100%;
+}
+
+.top-menu {
+  height: 100%;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  li {
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+    &:not(.current) {
+      a:hover {
+        color: $color-orange;
+      }
+    }
+  }
+  a:not(:hover) {
+    text-shadow: 1px 0 1px rgba(#464646, .4);
+  }
+  .current {
+    border-bottom-color: $color-orange;
+  }
+}
