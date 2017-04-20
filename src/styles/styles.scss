@@ -10,3 +10,15 @@
 /* blocks */
 @import "blocks/top-panel";
 @import "blocks/header";
+
+.content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.home {
+  .title {
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
