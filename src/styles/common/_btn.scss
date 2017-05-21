@@ -9,6 +9,7 @@
   line-height: 1;
   display: inline-block;
   @include transition(all, ease);
+
   &-orange {
     padding: 10px 15px;
     border-radius: 5px;
@@ -18,6 +19,7 @@
     background-color: $color-orange;
     box-shadow: 0 2px 1px $color-shadow-orange;
     &:hover {
+      color: $color-white;
       box-shadow: none;
     }
   }
