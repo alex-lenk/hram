@@ -13,9 +13,13 @@ var gulp = require('gulp'),
     rimraf = require('rimraf'),
     includer = require("gulp-x-includer"),
     browserSync = require("browser-sync"),
-    reload = browserSync.reload;
+    reload = browserSync.reload,
+    svgstore = require('gulp-svgstore'),
+    svgmin = require('gulp-svgmin'),
+    path = require('path'),
+    cheerio = require('gulp-cheerio');
 
-var path = {
+var way = {
     build: {
         html: 'build/',
         js: 'build/js/',
@@ -25,7 +29,7 @@ var path = {
     },
     src: {
         html: 'src/*.html',
-        js: 'src/js/main.js',
+        js: 'src/js/*.js',
         styles: 'src/styles/**/*.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
@@ -54,37 +58,55 @@ var config = {
     logPrefix: "frontend"
 };
 
+gulp.task('svgstore', function () {
+    return gulp
+        .src('./src/img/sprite/*.svg')
+        .pipe(svgmin(function (file) {
+            var prefix = path.basename(file.relative, path.extname(file.relative));
+            return {
+                plugins: [{
+                    cleanupIDs: {
+                        prefix: prefix + '-',
+                        minify: true
+                    }
+                }]
+            }
+        }))
+        .pipe(svgstore())
+        .pipe(gulp.dest('./build/img'));
+});
+
 gulp.task('webserver', function () {
     browserSync(config);
 });
 
 gulp.task('clean', function (cb) {
-    rimraf(path.clean, cb);
+    rimraf(way.clean, cb);
 });
 
 gulp.task('html:build', function () {
-    gulp.src(path.src.html)
+    gulp.src(way.src.html)
         .pipe(rigger())
-        .pipe(gulp.dest(path.build.html))
+        .pipe(gulp.dest(way.build.html))
         .pipe(reload({
             stream: true
         }));
 });
 
 gulp.task('js:build', function () {
-    gulp.src(path.src.js)
+    gulp.src(way.src.js)
         .pipe(rigger())
         .pipe(sourcemaps.init())
         .pipe(uglify())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(path.build.js))
+        .pipe(gulp.dest(way.build.js))
         .pipe(reload({
             stream: true
         }));
 });
 
 gulp.task('styles:build', function () {
-    gulp.src(path.src.styles)
+    gulp.src(way.src.styles)
         .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: ['src/styles/'],
@@ -95,14 +117,14 @@ gulp.task('styles:build', function () {
         .pipe(prefixer())
         .pipe(cssmin())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(path.build.css))
+        .pipe(gulp.dest(way.build.css))
         .pipe(reload({
             stream: true
         }));
 });
 
 gulp.task('image:build', function () {
-    gulp.src(path.src.img)
+    gulp.src(way.src.img)
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{
@@ -111,15 +133,15 @@ gulp.task('image:build', function () {
             use: [pngquant()],
             interlaced: true
         }))
-        .pipe(gulp.dest(path.build.img))
+        .pipe(gulp.dest(way.build.img))
         .pipe(reload({
             stream: true
         }));
 });
 
 gulp.task('fonts:build', function () {
-    gulp.src(path.src.fonts)
-        .pipe(gulp.dest(path.build.fonts))
+    gulp.src(way.src.fonts)
+        .pipe(gulp.dest(way.build.fonts))
 });
 
 gulp.task('build', [
@@ -132,31 +154,31 @@ gulp.task('build', [
 
 
 gulp.task('watch', function () {
-    watch([path.watch.html], function (event, cb) {
+    watch([way.watch.html], function (event, cb) {
         gulp.start('html:build');
     });
-    watch([path.watch.html_template], function (event, cb) {
+    watch([way.watch.html_template], function (event, cb) {
         gulp.start('html:build');
     });
-    watch([path.watch.styles], function (event, cb) {
+    watch([way.watch.styles], function (event, cb) {
         gulp.start('styles:build');
     });
-    watch([path.watch.styles_common], function (event, cb) {
+    watch([way.watch.styles_common], function (event, cb) {
         gulp.start('styles:build');
     });
-    watch([path.watch.styles_blocks], function (event, cb) {
+    watch([way.watch.styles_blocks], function (event, cb) {
         gulp.start('styles:build');
     });
-    watch([path.watch.styles_lib], function (event, cb) {
+    watch([way.watch.styles_lib], function (event, cb) {
         gulp.start('styles:build');
     });
-    watch([path.watch.js], function (event, cb) {
+    watch([way.watch.js], function (event, cb) {
         gulp.start('js:build');
     });
-    watch([path.watch.img], function (event, cb) {
+    watch([way.watch.img], function (event, cb) {
         gulp.start('image:build');
     });
-    watch([path.watch.fonts], function (event, cb) {
+    watch([way.watch.fonts], function (event, cb) {
         gulp.start('fonts:build');
     });
 });
