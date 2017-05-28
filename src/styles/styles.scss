@@ -12,15 +12,4 @@
 @import "blocks/information";
 @import "blocks/vk-count";
 @import "blocks/chronicle";
-
-.content-wrap {
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.home {
-  .title {
-    text-transform: uppercase;
-    text-align: center;
-  }
-}
+@import "blocks/sidebar";
