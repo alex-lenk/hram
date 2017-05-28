@@ -22,3 +22,36 @@
     text-align: center;
   }
 }
+
+.vk-count {
+  width: 100%;
+  height: calc(100% - 158px);
+  border-radius: 5px;
+  border: 1px solid #c5c5c5;
+  text-align: left;
+  position: relative;
+  display: flex;
+  align-items: center;
+  img {
+    max-width: 86px;
+    height: 86px;
+    flex-basis: 86px;
+  }
+}
+
+.vk-count-content {
+  padding: 10px 5px 10px 10px;
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.vk-count-title {
+  display: inline-block;
+}
+
+.vk-count-text {
+  color: #555555;
+}

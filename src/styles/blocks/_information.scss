@@ -80,6 +80,9 @@
 
 .info-stand {
   width: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .info-stand-sections {
@@ -88,6 +91,7 @@
   li {
     height: 128px;
     width: calc(100% / 2 - 15px);
+    border-radius: 5px;
     display: flex;
     align-items: center;
   }
