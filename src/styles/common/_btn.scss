@@ -23,120 +23,12 @@
       box-shadow: none;
     }
   }
-
-  &-blue {
-    padding: 20px 34px;
-    background-color: #4f8ad9;
-    color: #fff;
-    font-size: 15px;
-    border-radius: 30px;
-    text-transform: uppercase;
-    box-shadow: 0 8px 12px rgba(79, 138, 217, 0.24);
-    .arrow-right {
-      width: 20px;
-      height: 12px;
-      margin-left: 8px;
-      fill: #fff;
-      display: inline-block;
-      vertical-align: top;
-      margin-top: 1px;
-    }
-    .letter {
-      width: 27px;
-      height: 18px;
-      margin-left: 8px;
-      fill: #fff;
-      display: inline-block;
-      vertical-align: top;
-      margin-top: -2px;
-    }
-    &:hover {
-      color: #fff;
-      background-color: #a7c343;
-    }
-  }
-
-  &-transparent {
-    padding: 18px 29px;
-    background-color: #ffffff;
-    color: #4f8ad9;
-    font-size: 15px;
-    border-radius: 30px;
-    text-transform: uppercase;
-    border: 2px solid #4f8ad9;
-    box-shadow: 0 8px 12px rgba(79, 138, 217, 0.25);
-    &:hover, &:active {
-      background-color: #4f8ad9;
-      color: #ffffff;
-      box-shadow: 0 8px 12px 0 rgba(#505b6a, 0.25);
-    }
-    &:active, &:disabled {
-      box-shadow: none;
-    }
-  }
-
-  &-green {
-    padding: 20px 29px;
-    background-color: #a7c343;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 30px;
-    text-transform: uppercase;
-    &:hover {
-      background-color: #4f8ad9;
-      color: #fff;
-    }
-  }
-
-  &-white {
-    padding: 21px 37px 18px 34px;
-    text-transform: uppercase;
-    font-size: 15px;
-    color: #4f8ad9;
-    border-radius: 32px;
-    background-color: #ffffff;
-    box-shadow: 0 8px 12px rgba(79, 138, 217, 0.25);
-    svg {
-      fill: #4f8ad9;
-      transition: all 0.3s ease;
-    }
-    .search {
-      width: 21px;
-      height: 18px;
-    }
-    .arrow-right {
-      width: 20px;
-      height: 12px;
-      margin-left: 8px;
-      display: inline-block;
-      vertical-align: top;
-      margin-top: 1px;
-    }
-    &:hover {
-      background-color: #505b6a;
-      color: #ffffff;
-      svg {
-        fill: #ffffff;
-      }
-    }
-  }
-
-  &-back {
-    text-transform: uppercase;
-    font-size: 15px;
-    color: #505b6a;
-    &:hover {
-      color: #4f8ad9;
-      .arrow-right {
-        fill: #4f8ad9;
-      }
-    }
-    .arrow-right {
-      width: 20px;
-      height: 12px;
-      margin-right: 10px;
-      transform: rotateZ(180deg);
-      fill: #505b6a;
-    }
+  &-grey {
+    padding: 10px 20px;
+    background-color: #f9f8f8;
+    border: 1px solid #555;
+    color: #555;
+    border-radius: 5px;
+    text-align: center;
   }
 }
