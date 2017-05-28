@@ -70,17 +70,17 @@
 }
 
 .contacts-title {
+  margin-top: -2px;
   margin-bottom: 18px;
   font-size: 30px;
+  line-height: 1;
   text-transform: uppercase;
 }
 
 .contacts-list {
-  margin-bottom: 18px;
-  li {
-    &:not(:last-child) {
-      margin-bottom: 18px;
-    }
+  margin-bottom: 20px;
+  li:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
 
