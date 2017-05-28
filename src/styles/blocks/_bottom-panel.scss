@@ -1,0 +1,95 @@
+.bottom-panel {
+  padding-top: 30px;
+}
+
+.bottom-panel-left {
+  height: 490px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  &::before {
+    width: 160rem;
+    height: 100%;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    content: '';
+    border-radius: 5px;
+    background: url(../img/bg-footer.jpg) no-repeat right top;
+    box-shadow: 0 0 15px rgba(#000, .25);
+  }
+  .information-title {
+    text-align: center;
+    position: relative;
+    background-color: transparent;
+    &::before {
+      width: 160rem;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      content: '';
+      background-color: rgba(59, 46, 6, .5);
+      z-index: 5;
+    }
+  }
+
+  .information-title-text {
+    position: relative;
+    z-index: 8;
+    line-height: 1.4;
+  }
+}
+
+.contacts {
+  li {
+    padding-left: 30px;
+    position: relative;
+  }
+  a {
+    color: inherit;
+  }
+  svg {
+    margin-right: 10px;
+    margin-bottom: 2px;
+    fill: #000;
+    vertical-align: middle;
+    position: absolute;
+    left: 0;
+    &:not(.location) {
+      width: 18px;
+      height: 18px;
+      top: 2px;
+    }
+  }
+  .location {
+    width: 25px;
+    height: 25px;
+    top: 5px;
+  }
+}
+
+.contacts-title {
+  margin-bottom: 18px;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.contacts-list {
+  margin-bottom: 18px;
+  li {
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+}
+
+.contacts-map {
+  width: 100%;
+  height: 243px;
+  .btn-grey {
+    width: 100%;
+    margin-bottom: 15px;
+    display: inline-block;
+  }
+}
