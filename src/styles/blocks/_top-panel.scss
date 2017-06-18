@@ -1,12 +1,8 @@
 .top-panel {
   background-color: #adaca3;
-  //background-color: rgba(#3b2e06, .2);
   color: $color-white;
   .row {
     height: 70px;
-  }
-  a {
-    color: $color-white;
   }
 }
 
@@ -21,7 +17,9 @@
   justify-content: flex-end;
   display: flex;
   align-items: center;
-
+  a {
+    color: $color-white;
+  }
   .phone-call {
     width: 24px;
     height: 24px;
@@ -38,7 +36,7 @@
   justify-content: flex-end;
   input {
     width: 0;
-    height: 33px;
+    height: 32px;
     position: absolute;
     right: 48px;
     z-index: 5;
@@ -74,29 +72,38 @@
   }
 }
 
-.top-nav {
+.nav-panel {
   height: 100%;
 }
 
-.top-menu {
-  height: 100%;
+.menu {
   font-size: 18px;
-  display: flex;
-  justify-content: space-between;
+  line-height: 1;
+}
+
+.menu-current-text {
+  color: #d5d6d0;
+}
+
+.navbar-toggle {
+  height: 100%;
+  padding: 15px;
+  background-color: #98958e;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: inline-flex;
   align-items: center;
-  li {
-    padding-bottom: 2px;
-    border-bottom: 1px solid transparent;
-    &:not(.current) {
-      a:hover {
-        color: $color-orange;
-      }
-    }
+  &::before {
+    width: 20px;
+    height: 1px;
+    margin-right: 20px;
+    content: '';
+    background-color: #ffffff;
+    box-shadow: 0 5px 0 0 #ffffff, 0 -5px 0 0 #ffffff;
   }
-  a:not(:hover) {
-    text-shadow: 1px 0 1px rgba(#464646, .4);
-  }
-  .current {
-    border-bottom-color: $color-orange;
-  }
+}
+
+.navbar-toggle-text {
+  line-height: 1;
 }

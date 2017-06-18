@@ -23,10 +23,6 @@
   }
 }
 
-.information-block {
-  width: calc(100% / 2 - 15px);
-}
-
 .information-top, .information-bottom {
   display: flex;
   justify-content: center;
@@ -37,6 +33,8 @@
 .information-top {
   height: 300px;
   margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   .btn-orange {
     margin: 35px 0 -70px;
@@ -47,6 +45,8 @@
 
 .information-bottom {
   height: 270px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .stand {
@@ -75,7 +75,6 @@
 }
 
 .info-stand {
-  width: 470px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -89,6 +88,8 @@
     width: calc(100% / 2 - 15px);
     display: flex;
     align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .information-title {
     width: 100%;

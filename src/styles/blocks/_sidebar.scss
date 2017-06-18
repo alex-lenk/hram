@@ -17,7 +17,7 @@
 }
 
 .sidebar-content {
-  @include clearfix;
+  overflow: hidden;
 }
 
 .sidebar-media {

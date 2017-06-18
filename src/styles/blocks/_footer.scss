@@ -1,12 +1,8 @@
 footer {
-  height: 80px;
   background-color: #484848;
   position: relative;
   color: #fff;
   font-size: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   &::after, &::before {
     content: '';
     display: block;
@@ -61,7 +57,6 @@ footer {
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
-  text-align: right;
   li {
     display: inline-block;
     &:not(:last-child) {
