@@ -2,33 +2,33 @@
 @import "mixin";
 
 .btn {
-  border: 0;
-  background: transparent;
-  text-align: center;
-  cursor: pointer;
-  line-height: 1;
-  display: inline-block;
-  @include transition(all, ease);
-
-  &-orange {
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    border: 1px solid $color-orange;
-    color: $color-white;
-    background-color: $color-orange;
-    box-shadow: 0 2px 1px $color-shadow-orange;
-    &:hover {
-      color: $color-white;
-      box-shadow: none;
-    }
-  }
-  &-grey {
-    padding: 10px 20px;
-    background-color: #f9f8f8;
-    border: 1px solid #555;
-    color: #555;
-    border-radius: 5px;
+    border: 0;
+    background: transparent;
     text-align: center;
-  }
+    cursor: pointer;
+    line-height: 1;
+    display: inline-block;
+    @include transition(all, ease);
+    
+    &-orange {
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        border: 1px solid $color-orange;
+        color: $color-white;
+        background-color: $color-orange;
+        box-shadow: 0 2px 1px $color-shadow-orange;
+        &:hover {
+            color: $color-white;
+            box-shadow: none;
+        }
+    }
+    &-grey {
+        padding: 10px 20px;
+        background-color: #f9f8f8;
+        border: 1px solid #555;
+        color: #555;
+        border-radius: 5px;
+        text-align: center;
+    }
 }

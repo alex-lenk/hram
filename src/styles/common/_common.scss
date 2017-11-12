@@ -3,137 +3,137 @@
 
 html,
 body {
-  background: #ffffff;
-  color: #000000;
-  font-size: 15px;
-  line-height: 1.4;
-  overflow-x: hidden;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #ffffff;
+    color: #000000;
+    font-size: 15px;
+    line-height: 1.4;
+    overflow-x: hidden;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 a, .as-link {
-  color: #4f8ad9;
-  text-decoration: none;
-  @include transition(all, ease);
-  &:hover {
     color: #4f8ad9;
-  }
-  &:focus {
-    outline: none;
-  }
+    text-decoration: none;
+    @include transition(all, ease);
+    &:hover {
+        color: #4f8ad9;
+    }
+    &:focus {
+        outline: none;
+    }
 }
 
 .as-link {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 b, strong {
-  font-weight: 700;
+    font-weight: 700;
 }
 
 h1, h2, h3, h4 {
-  margin-top: 0;
-  margin-bottom: 20px;
-  padding: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding: 0;
 }
 
 h1 {
-  font-size: 30px;
+    font-size: 30px;
 }
 
 h2 {
-  font-size: 26px;
+    font-size: 26px;
 }
 
 h3 {
-  font-size: 22px;
+    font-size: 22px;
 }
 
 h4 {
-  font-size: 20px;
+    font-size: 20px;
 }
 
 .text {
-  &-center {
-    text-align: center
-  }
-  &-left {
-    text-align: left
-  }
-  &-right {
-    text-align: right
-  }
-  &-justify {
-    text-align: justify
-  }
-  &-bold {
-    font-weight: 700;
-  }
-  &-nowrap {
-    white-space: nowrap;
-  }
-  &-lowercase {
-    text-transform: lowercase;
-  }
-  &-uppercase {
-    text-transform: uppercase;
-  }
-  &-capitalize {
-    text-transform: capitalize;
-  }
+    &-center {
+        text-align: center
+    }
+    &-left {
+        text-align: left
+    }
+    &-right {
+        text-align: right
+    }
+    &-justify {
+        text-align: justify
+    }
+    &-bold {
+        font-weight: 700;
+    }
+    &-nowrap {
+        white-space: nowrap;
+    }
+    &-lowercase {
+        text-transform: lowercase;
+    }
+    &-uppercase {
+        text-transform: uppercase;
+    }
+    &-capitalize {
+        text-transform: capitalize;
+    }
 }
 
 .pull-left {
-  float: left;
+    float: left;
 }
 
 .pull-right {
-  float: right;
+    float: right;
 }
 
 .list {
-  &-unstyled {
-    padding-left: 0;
-    margin-bottom: 0;
-    list-style: none;
-  }
+    &-unstyled {
+        padding-left: 0;
+        margin-bottom: 0;
+        list-style: none;
+    }
 }
 
 .clearfix {
-  @include clearfix;
+    @include clearfix;
 }
 
 button, input, select, textarea {
-  &:focus,
-  &:active {
-    outline: none;
-    box-shadow: none;
-  }
+    &:focus,
+    &:active {
+        outline: none;
+        box-shadow: none;
+    }
 }
 
 .text-selection {
-  color: #6ba0b2;
+    color: #6ba0b2;
 }
 
 .container {
-  width: 100%;
-  max-width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .content-wrap {
-  padding-top: 20px;
+    padding-top: 20px;
 }
 
 .home-title {
-  text-transform: uppercase;
-  text-align: center;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .media-decor {
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(#000, .25);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(#000, .25);
 }
